@@ -1,0 +1,230 @@
+﻿; TECkit mapping for Unicode romanised Skt. to DN conversion 
+;Updated March 23, 2010 9:53:03 PM EDT
+
+LHSName "UNICODE"
+RHSName "UNICODE"
+
+Define NUL U+007F
+
+pass(Unicode)
+
+UniClass [LTR] = ( U+0100 U+0101 'i' 'I' U+012A U+012B 'u' 'U' U+016A U+016B U+1E5A U+1E5B U+1E5C U+1E5D 'E' 'e' 'Ai'  'ai' 'O' 'o' 'Au' 'au' U+1E36 U+1E37 U+1E38 U+1E39 U+1E42 U+1E43 U+1E24 U+1E25 'K' 'k' 'Kh' 'kh' 'G'  'g' 'Gh' 'gh' U+1E44 U+1E45 'C' 'c' 'Ch' 'ch' 'J' 'j' 'Jh' 'jh' 'Ñ' 'ñ' U+1E6C U+1E6D 'U+1E6C h' 'U+1E6D h' U+1E0C U+1E0D 'U+1E0C h' 'U+1E0D h' U+1E46 U+1E47 'T' 't' 'Th' 'th' 'D' 'd' 'Dh' 'dh' 'N' 'n' 'P' 'p' 'Ph' 'ph' 'B' 'b' 'Bh' 'bh' 'M' 'm' 'Y' 'y' 'R' 'r' 'L' 'l' 'V' 'v' U+015A U+015B U+1E62 U+1E63 'S' 's' 'H' 'h' )
+
+UniClass [rMedVow] = ( U+0100 U+0101 'I' 'i' U+012A U+012B 'U' 'u' U+016A U+016B U+1E5A U+1E5B U+1E5C U+1E5D 'E' 'e' U+0114 U+0115 'Ai' 'ai' 'O' 'o' U+014E U+014F 'Au' 'au' U+1E36 U+1E37 U+1E38 U+1E39 U+1E42 U+1E43 U+1E24 U+1E25 )
+
+;UniClass [dMedVow] = ( U+093E U+093F U+0940 U+0941 U+0942 U+0943 U+0944 U+0947 U+0948 U+094B U+094C U+0962 U+0963 U+0902 U+0903 )
+
+UniClass [rCons] = ( 'k' 'K' 'kh' 'Kh' 'G' 'g' 'Gh' 'gh' U+1E44 U+1E45 'C' 'c' 'Ch' 'ch' 'J' 'j' 'Jh' 'jh' 'Ñ' 'ñ' U+1E6C U+1E6D 'U+1E6C h' 'U+1E6D h' U+1E0C U+1E0D 'U+1E0C h' 'U+1E0D h' U+1E46 U+1E47 'T' 't' 'Th' 'th' 'D' 'd' 'Dh' 'dh' 'N' 'n' 'P' 'p' 'Ph' 'ph' 'B' 'b' 'Bh' 'bh' 'M' 'm' 'Y' 'y' 'R' 'r' 'L' 'l' 'V' 'v' U+015A U+015B U+1E62 U+1E63 'S' 's' 'H' 'h' )
+
+;UniClass [dCons] = ( U+0915 U+0916 U+0917 U+0918 U+0919 U+091A U+091B U+091C U+091D U+091E U+091F U+0920 U+0921 U+0922 U+0923 U+0924 U+0925 U+0926 U+0927 U+0928 U+092A U+092B U+092C U+092D U+092E U+092F U+0930 U+0932 U+0935 U+0936 U+0937 U+0938 U+0939 )
+
+;initial vowels
+
+'a' / ^[rCons] _ <> U+0905 
+'a' / 'a'_  <> U+0905 
+'A' / ^[rCons] _ <> U+0905 
+U+00E4 <> U+0905; ä
+U+00E4 <> U+0905; Ä
+U+0100 / ^[rCons] _ <> U+0906 
+U+0101 / ^[rCons] _ <> U+0906 
+'i' / ^[rCons] _ <> U+0907 
+'I' / ^[rCons] _ <> U+0907 
+U+00EF <> U+0907; ï
+U+00CF <> U+0907; Ï
+U+0129 / ^[rCons] _ <> U+0907 U+0901; i + candrabindu
+U+012A / ^[rCons] _ <> U+0908 
+U+012B / ^[rCons] _ <> U+0908 
+'u' / ^[rCons] _ <> U+0909 
+'U' / ^[rCons] _ <> U+0909 
+U+00FC <> U+0909; ü
+U+00DC <> U+0909; Ü
+U+016A / ^[rCons] _ <> U+090A 
+U+016B / ^[rCons] _ <> U+090A 
+U+1E5A / ^[rCons] _ <> U+090B;initial Ṛ
+U+1E5B / ^[rCons] _ <> U+090B
+U+1E5C / ^[rCons] _ <> U+0960;initial Ṝ
+U+1E5D / ^[rCons] _ <> U+0960
+U+1E36 / ^[rCons] _ <> U+090C;initial Ḷ
+U+1E37 / ^[rCons] _ <> U+090C
+U+1E38 / ^[rCons] _ <> U+0961;initial Ḹ
+U+1E39 / ^[rCons] _ <> U+0961
+'e' / ^[rCons] _ <> U+090F
+'E' / ^[rCons] _ <> U+090F
+U+0114  / ^[rCons] _ <> U+090D
+U+0115 / ^[rCons] _ <> U+090D
+'ai' / ^[rCons] _ <> U+0910
+'Ai' / ^[rCons] _ <> U+0910
+'o' / ^[rCons] _ <> U+0913
+'O' / ^[rCons] _ <> U+0913
+U+00F5 / ^[rCons] _ <> U+0913 U+0901; o + candrabindu
+U+014E  / ^[rCons] _ <> U+0911
+U+014F / ^[rCons] _ <> U+0911
+'au' / ^[rCons] _ <> U+0914
+'Au' / ^[rCons] _ <> U+0914
+
+;non-final consonants
+
+'k' / _ [rMedVow] <> U+0915 
+'K' / _ [rMedVow] <> U+0915 
+'kh' / _ [rMedVow] <> U+0916
+'Kh' / _ [rMedVow] <> U+0916
+'g' / _ [rMedVow] <> U+0917
+'G' / _ [rMedVow] <> U+0917
+'gh' / _ [rMedVow] <> U+0918
+'Gh' / _ [rMedVow] <> U+0918
+U+1E44 / _ [rMedVow] <> U+0919
+U+1E45 / _ [rMedVow] <> U+0919
+'C' / _ [rMedVow] <> U+091A
+'c' / _ [rMedVow] <> U+091A
+'ch' / _ [rMedVow] <> U+091B
+'Ch' / _ [rMedVow] <> U+091B
+'J' / _ [rMedVow] <> U+091C
+'j' / _ [rMedVow] <> U+091C
+'Jh' / _ [rMedVow] <> U+091D
+'jh' / _ [rMedVow] <> U+091D
+'ñ' / _ [rMedVow] <> U+091E
+'Ñ' / _ [rMedVow] <> U+091E
+U+1E6C / _ [rMedVow] <> U+091F
+U+1E6D / _ [rMedVow] <> U+091F
+U+1E6C 'h' / _ [rMedVow] <> U+0920
+U+1E6D 'h' / _ [rMedVow] <> U+0920
+U+1E0C / _ [rMedVow] <> U+0921
+U+1E0D / _ [rMedVow] <> U+0921
+U+1E0C 'h' / _ [rMedVow] <> U+0922
+U+1E0D 'h' / _ [rMedVow] <> U+0922
+U+1E46 / _ [rMedVow] <> U+0923
+U+1E47 / _ [rMedVow] <> U+0923
+'t' / _ [rMedVow] <> U+0924
+'T' / _ [rMedVow] <> U+0924
+'th' / _ [rMedVow] <> U+0925
+'Th' / _ [rMedVow] <> U+0925
+'D' / _ [rMedVow] <> U+0926
+'d' / _ [rMedVow] <> U+0926
+'Dh' / _ [rMedVow] <> U+0927
+'dh' / _ [rMedVow] <> U+0927
+'N' / _ [rMedVow] <> U+0928
+'n' / _ [rMedVow] <> U+0928
+'P' / _ [rMedVow] <> U+092A
+'p' / _ [rMedVow] <> U+092A
+'Ph' / _ [rMedVow] <> U+092B
+'ph' / _ [rMedVow] <> U+092B
+'B' / _ [rMedVow] <> U+092C
+'b' / _ [rMedVow] <> U+092C
+'Bh' / _ [rMedVow] <> U+092D
+'bh' / _ [rMedVow] <> U+092D
+'M' / _ [rMedVow] <> U+092E
+'m' / _ [rMedVow] <> U+092E
+'Y' / _ [rMedVow] <> U+092F
+'y' / _ [rMedVow] <> U+092F
+'R' / _ [rMedVow] <> U+0930
+'r' / _ [rMedVow] <> U+0930
+'L' / _ [rMedVow] <> U+0932
+'l' / _ [rMedVow] <> U+0932
+'V' / _ [rMedVow] <> U+0935
+'v' / _ [rMedVow] <> U+0935
+U+015A / _ [rMedVow] <> U+0936
+U+015B / _ [rMedVow] <> U+0936
+U+1E62 / _ [rMedVow] <> U+0937
+U+1E63 / _ [rMedVow] <> U+0937
+'S' / _ [rMedVow] <> U+0938
+'s' / _ [rMedVow] <> U+0938
+'H' / _ [rMedVow] <> U+0939
+'h' / _ [rMedVow] <> U+0939
+
+;medial vowels
+
+U+0101 <> U+093E ;ā
+'i' <> U+093F ;i
+U+0129 <> U+093F U+0901; i + candrabindu
+U+012B <> U+0940 ;ī
+'u' <> U+0941 ;u
+U+016B <> U+0942 ;ū
+U+1E5B <> U+0943 ;ṛ
+U+1E5D <> U+0944 ;ṝ
+'e' <> U+0947 ;e
+'ai' <> U+0948 ;ai
+'o' <> U+094B ;o
+U+00F5 <> U+094B U+0901; o + candrabindu
+'au' <> U+094C ;au
+U+1E37 <> U+0962 ;ḷ
+U+1E39 <> U+0963 ;ḹ
+U+1E43 <> U+0902 ;ṃ
+U+1E25 <> U+0903 ;ḥ
+
+
+U+0061 U+1E43 / [rMedVow] _ <>  U+0905 U+0902 ;Vaṃ
+U+0061 U+1E43 / U+0061 _ <> U+0905 U+0902 ;aaṃ
+U+0061 U+1E25  / [rMedVow] _ <> U+0905 U+0903 ;Vaḥ
+U+0061 U+1E25 / U+0061 _ <> U+0905 U+0903 ;aaḥ
+
+U+0061 U+1E43 / ^[rMedVow] _ <> U+0902 ;aṃ
+U+0061 U+1E43 / ^U+0061 _ <> U+0902 ;aṃ
+U+0061 U+1E25 <> U+0903 ;aḥ
+
+
+;final cons
+
+'k' <> U+0915 U+094D
+'kh' <> U+0916 U+094D
+'g' <> U+0917 U+094D
+'gh' <> U+0918 U+094D
+U+1E45 <> U+0919 U+094D
+'c' <> U+091A U+094D
+'ch' <> U+091B U+094D
+'j' <> U+091C U+094D
+'jh' <> U+091D U+094D
+'ñ' <> U+091E U+094D
+U+1E6D <> U+091F U+094D
+U+1E6D 'h' <> U+0920 U+094D
+U+1E0D <> U+0921 U+094D
+U+1E0D 'h' <> U+0922 U+094D
+U+1E47 <> U+0923 U+094D
+'t' <> U+0924 U+094D
+'th' <> U+0925 U+094D
+'d' <> U+0926 U+094D
+'dh' <> U+0927 U+094D
+'n' <> U+0928 U+094D
+'p' <> U+092A U+094D
+'ph' <> U+092B U+094D
+'b' <> U+092C U+094D
+'bh' <> U+092D U+094D
+'m' <> U+092E U+094D
+'y' <> U+092F U+094D
+'r' <> U+0930 U+094D
+'l' <> U+0932 U+094D
+'v' <> U+0935 U+094D
+U+015B <> U+0936 U+094D
+U+1E63 <> U+0937 U+094D
+'s' <> U+0938 U+094D
+'h' <> U+0939 U+094D
+
+;avagraha and daṇḍa
+
+U+02BC <> U+093D ;styled apostrophe
+U+2019 <> U+093D ;styled apostrophe
+U+0027 <> U+093D ;unstyled apostrophe
+U+002F U+002F <> U+0965 ;double daṇḍa
+U+002F <> U+0964 ;single daṇḍa
+
+;numerals
+
+U+0030 <> U+0966 ; 0
+U+0031 <> U+0967 ; 1
+U+0032 <> U+0968 ; 2
+U+0033 <> U+0969 ; 3
+U+0034 <> U+096A ; 4
+U+0035 <> U+096B ; 5
+U+0036 <> U+096C ; 6
+U+0037 <> U+096D ; 7
+U+0038 <> U+096E ; 8
+U+0039 <> U+096F ; 9
+
+pass(Unicode)
+
+UniClass [dCons] = ( U+0915 .. U+0939 )
+
+[dCons]=D 'a' <> @D ;strips the -a off consonants
+[dCons]=D 'A' <> @D ;strips the -A off consonants
+
+
+
