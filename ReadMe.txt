@@ -1,3 +1,8 @@
+2014-07-26 added the following CC license, with explicit permission from Somdev Vasudeva:
+
+  This work is licensed under the Creative Commons Attribution 4.0 International License. 
+  To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.
+
 v0.3. An improved version of my earlier TECkit map to dynamically convert UTF8 Romanized Sanskrit and Prakrit to Devanagari in XeLaTeX. This version fixes:
 
 —Roman capitals are converted.
