@@ -206,6 +206,9 @@ U+0027 <> U+093D ;unstyled apostrophe
 U+002F U+002F <> U+0965 ;double daṇḍa
 U+002F <> U+0964 ;single daṇḍa
 
+; abbreviation sign
+U+00B0 <> U+0970
+
 ;numerals
 
 U+0030 <> U+0966 ; 0
