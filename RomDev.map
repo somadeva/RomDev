@@ -157,10 +157,18 @@ U+0061 U+1E43 / U+0061 _ <> U+0905 U+0902 ;aaṃ
 U+0061 U+1E25  / [rMedVow] _ <> U+0905 U+0903 ;Vaḥ
 U+0061 U+1E25 / U+0061 _ <> U+0905 U+0903 ;aaḥ
 
+'A' U+1E43 <> U+0905 U+0902 ; ugly fix for initial aṃ
+
+; 'ṃ
+U+0027 U+1E43 <> U+0902 U+093D
+U+2019 U+1E43 <> U+0902 U+093D
+U+02BC U+1E43 <> U+0902 U+093D
+
+
 U+0061 U+1E43 / ^[rMedVow] _ <> U+0902 ;aṃ
 U+0061 U+1E43 / ^U+0061 _ <> U+0902 ;aṃ
-U+0061 U+1E25 <> U+0903 ;aḥ
 
+U+0061 U+1E25 <> U+0903 ;aḥ
 
 ;final cons
 
@@ -222,12 +230,12 @@ U+0037 <> U+096D ; 7
 U+0038 <> U+096E ; 8
 U+0039 <> U+096F ; 9
 
+; praṇava
+'oṃ' / _ ^[LTR] <> U+0950
+
 pass(Unicode)
 
 UniClass [dCons] = ( U+0915 .. U+0939 )
 
 [dCons]=D 'a' <> @D ;strips the -a off consonants
 [dCons]=D 'A' <> @D ;strips the -A off consonants
-
-
-
